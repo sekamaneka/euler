@@ -8,9 +8,7 @@ from the product of two 2-digit numbers is 9009 = 91 * 99.
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
-import operator
-def largest_palindrome(max_factor,min_factor=0):
-    return palindrome(max_factor,min_factor,operator.gt,min_factor**2)
+
 def palindrome(max_factor,min_factor,op,lim):
     for i in range(min_factor,max_factor):
         for j in range(i,max_factor+1):
@@ -25,6 +23,6 @@ def palindrome(max_factor,min_factor,op,lim):
                     if op(int(prod),lim):
                         sav_prod = lim = int(prod)
                         saved = (i,j)
-    return sav_prod
+    return sav_prod,saved
 
-print(largest_palindrome(999,1))
+print(palindrome(999,000,operator.gt,000))
