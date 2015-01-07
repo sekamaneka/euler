@@ -14,4 +14,4 @@ Find the product abc.
 
 from pythagorean_triplet import triplets_in_range
 
-print(triplets_in_range(1000,1001))
+print(triples_in_range(1000,1001))
