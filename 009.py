@@ -14,4 +14,7 @@ Find the product abc.
 
 from pythagorean_triplet import triplets_in_range
 
-print(triplets_in_range(1000,1001))
+tr = triplets_in_range(200, 425)
+for i in tr:
+    if sum(i) == 1000:
+        print (i[0]*i[1]*i[2])

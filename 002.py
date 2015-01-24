@@ -12,15 +12,16 @@ exceed four million.
 """
 dc = dict()
 
+
 def fib(n):
-    if n<2:
+    if n < 2:
         return n
     if n-1 not in dc.keys():
         dc[n-1] = fib(n-1)
     if n-2 not in dc.keys():
         dc[n-2] = fib(n-2)
-    return dc[n-1] + dc[n-2]   
+    return dc[n - 1] + dc[n - 2]
 
 
 (fib(60))
-print(sum([i for i in dc.values() if i<4000000 and i%2==0]))
+print(sum([i for i in dc.values() if i < 4000000 and i % 2 == 0]))

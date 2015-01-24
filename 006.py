@@ -18,15 +18,15 @@ hundred natural numbers and the square of the sum.
 
 def sum_of_squares(n=100):
     if n == 0:
-        return 0 
-    return pow(n,2) + sum_of_squares(n-1)
+        return 0
+    return pow(n, 2) + sum_of_squares(n-1)
+
 
 def sums(n=100):
     if n == 0:
         return 0
-    return n+sums(n-1)
+    return n + sums(n-1)
+
 
 if __name__ == "__main__":
-    print(pow(sums(),2) - sum_of_squares())
-
-#print(sum_of_squares(10))
+    print(pow(sums(), 2) - sum_of_squares())
